@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow-x:hidden; */
+}
+
+html{
+    scroll-behavior: smooth;
+    font-size:62.5%;
+    direction: rtl;
+    background-color:whitesmoke;
+    /* max-width:97vw; */
+        /* to get 10px presntage of 16px(root size) 10/16*100=62.5 */
+}
+
+body{
+    font-family:"Lato",sans-serif;
+    font-weight: 400;
+    /* font-size:16px; */
+    line-height: 1.7;
+    color:white; 
+    background-color:whitesmoke;
+}
+app-root,app-features{
+    background-color:whitesmoke;
+}
