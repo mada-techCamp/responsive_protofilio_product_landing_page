@@ -1,0 +1,14 @@
+<section id=works>
+    <video id="videoBG" [src]="bkgVid" controls [muted]="true" loop data-wow-delay="0.5s">
+    </video> <br>
+    <article class="img-container wow animate__fadeInUp" style=" width:100%;
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;overflow:hidden;" data-wow-delay="0.5s">
+    <figure  class="vid-list wow animate__fadeInUp" *ngFor="let pic of  arrOfpics;let i = index" [attr.data-index]="i" data-wow-delay="0.5s">
+        <img  id=bkgImg [src]="pic" (click)="onClick(i)">
+    </figure>
+        
+    </article>
+   
+</section>
