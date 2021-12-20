@@ -1,0 +1,9 @@
+<nav [ngClass]="{'show': classMenu,'bkgclr':navBkg}" >
+    <a href="#" (click)="onHide()"><img class=logo [ngClass]="{'show-right': classMenu}"  src="../../assets/logo.png"></a>
+    <a href="#about" (click)="onHide()">عني ؟</a>
+    <a href="#features" (click)="onHide()">التفاصيل</a>
+    <a href="#works" (click)="onHide()" >الاعمال</a>
+    <a href="#contact" (click)="onHide()">التواصل</a>
+</nav>
+<div  [ngClass]="{'opend': classMenu}" class="button" (click)="onClick()"> < </div>
+<a href="#" class="button up" > ^ </a>
