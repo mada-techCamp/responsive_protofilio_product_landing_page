@@ -6,4 +6,6 @@
 
 ## Html-css-typescript-javascript
 
+## awesome fonts + animate.css library
+
 [webpage_link](https://mwmotion-graphic.web.app/)
