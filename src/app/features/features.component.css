@@ -1,0 +1,119 @@
+section{
+    width:100%;
+    height:100vh;
+    background-color:whitesmoke;
+    color:white; 
+  }
+#features{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    /* height:auto; */
+  }
+  .flip-card{
+    background-color: transparent;
+    width: 27rem;
+    height: 39rem;
+    perspective: 1000px;
+  }
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.3s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius:10%;
+  }
+  .flip-card:hover .hover{
+    transform: scale(1.10) translateZ(0);
+    box-shadow: -14px 10px 5px -1px rgba(0,0,0,0.66);
+    -webkit-box-shadow: -14px 10px 5px -1px rgba(0,0,0,0.66);
+    -moz-box-shadow: -14px 10px 5px -1px rgba(0,0,0,0.66);
+  }
+  .flip-card .flip{
+    /* animation: flip .2s linear; */
+    transform:rotateY(180deg);
+  }
+  /* @keyframes flip{
+    from{
+      transform: scale(1.10) translateZ(0);
+    }
+    to{
+      transform:rotateY(180deg);
+    }
+  } */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .flip-card-front {
+    background-color: #37383B;
+    opacity: 1;
+    background-size: 62px 62px;
+    background-position: 0px 0,31px 31px;
+    border-radius:10%;
+    animation: movingDots 3s linear infinite;
+  }
+
+  @keyframes movingDots {
+    100% {
+      background-position: 310px 0,340px 31px;
+    }
+  }
+  .pink{
+    background-image:  radial-gradient(#ED207B 1.55px, transparent 1.55px), radial-gradient(#ED207B 1.55px, #37383B 1.55px);
+    color:#ED207B;
+  }
+  .green{
+    background-image:  radial-gradient(#1b998b 1.55px, transparent 1.55px), radial-gradient(#1b998b 1.55px, #37383B 1.55px);
+    color:#1b998b;
+  }
+  .blue{
+    background-image:  radial-gradient(#008dd5 1.55px, transparent 1.55px), radial-gradient(#008dd5 1.55px, #37383B 1.55px);
+    color:#008dd5;
+  }
+  .flip-card-back {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+    border-radius:10%;
+    font-size:2rem;
+    padding:0 1rem;
+  }
+  @media screen and (max-aspect-ratio: 16/15) {
+    #features{
+        height:auto;
+        padding:5vh 0;
+        /* margin:5vh 0; */
+      }
+      .flip-card {
+        width: 20rem;
+        margin-bottom: 2%;
+        height: 32rem;
+      }
+  }
+
+  @media screen and (max-height:540px) and (max-width:740px){
+    #features{
+      height:auto;
+      padding-top:5vh;
+    }
+  
+    .flip-card {
+      width: 20rem;
+      margin-bottom: 2%;
+      height: 32rem;
+    }
+  
+  }
